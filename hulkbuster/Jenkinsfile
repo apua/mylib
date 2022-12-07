@@ -1,0 +1,11 @@
+pipeline {
+    agent { label "verif-sys-validation-build-agent" }
+    stages {
+        stage('Run') {
+            steps {
+                echo 'hello world'
+                sh 'source /nfs/teams/verif/static/sys_validation/venv/bin/activate; python --version'
+            }
+        }
+    }
+}
